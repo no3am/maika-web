@@ -3,138 +3,197 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Maika Terms of Service</title>
+    <title>Maika — Terms of Service</title>
     <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        color: #3a2e2e;
+        background: #fdfaf8;
         line-height: 1.7;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 24px 20px 60px;
-        color: #333;
       }
-      h1 { color: #c47a88; margin-bottom: 4px; }
-      h2 { color: #444; margin-top: 36px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-      .meta { color: #777; font-style: italic; margin-bottom: 32px; }
-      ul { padding-left: 22px; }
-      li { margin-bottom: 6px; }
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 16px 32px;
+        border-bottom: 1px solid #ede5e1;
+        background: #fdfaf8;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .nav-brand img { width: 32px; height: 32px; border-radius: 7px; }
+      .nav-brand span { font-size: 18px; font-weight: 700; color: #3a2e2e; }
+      .season-strip { display: flex; height: 4px; }
+      .season-strip div { flex: 1; }
+      .s1 { background: #8da882; } .s2 { background: #c9a480; }
+      .s3 { background: #c47a88; } .s4 { background: #8fa8c0; }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      h1 { font-size: 32px; font-weight: 800; color: #3a2e2e; letter-spacing: -0.5px; margin-bottom: 6px; }
+      .meta { color: #9b8885; font-style: italic; font-size: 14px; margin-bottom: 40px; }
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #3a2e2e;
+        margin-top: 40px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #ede5e1;
+      }
+      p { font-size: 15px; color: #3a2e2e; margin-bottom: 12px; }
+      ul { padding-left: 20px; margin-bottom: 12px; }
+      li { font-size: 15px; margin-bottom: 6px; }
       a { color: #c47a88; }
-      .back { display: inline-block; margin-bottom: 24px; color: #c47a88; text-decoration: none; font-size: 14px; }
-      .back:hover { text-decoration: underline; }
+      footer {
+        border-top: 1px solid #ede5e1;
+        padding: 24px 20px;
+        text-align: center;
+        color: #9b8885;
+        font-size: 13px;
+        background: #fdfaf8;
+      }
+      footer a { color: #c47a88; text-decoration: none; margin: 0 10px; }
     </style>
   </head>
   <body>
-    <a href="/" class="back">← maika-app.com</a>
-    <h1>Terms of Service</h1>
-    <p class="meta">Last updated: March 28, 2026</p>
+    <nav>
+      <a href="/" class="nav-brand">
+        <img src="/maika-icon.png" alt="Maika" />
+        <span>Maika</span>
+      </a>
+    </nav>
+    <div class="season-strip">
+      <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div>
+    </div>
 
-    <h2>Acceptance of Terms</h2>
-    <p>
-      By downloading or using the Maika app, you agree to be bound by these Terms of Service.
-      If you do not agree, do not use the app.
-    </p>
+    <main>
+      <h1>Terms of Service</h1>
+      <p class="meta">Last updated: March 28, 2026</p>
 
-    <h2>Description of Service</h2>
-    <p>
-      Maika is a women's health and cycle tracking application that provides cycle logging,
-      personalised health content, AI-powered chat, and health insights. The service is provided
-      by the Maika team.
-    </p>
+      <h2>Acceptance of Terms</h2>
+      <p>
+        By downloading or using the Maika app, you agree to be bound by these Terms of Service.
+        If you do not agree, do not use the app.
+      </p>
 
-    <h2>Eligibility</h2>
-    <p>
-      You must be at least 18 years old to use Maika. By using the app you confirm that you
-      meet this requirement.
-    </p>
+      <h2>Description of Service</h2>
+      <p>
+        Maika is a women's health and cycle tracking application that provides cycle logging,
+        personalised health content, AI-powered chat, and health insights.
+      </p>
 
-    <h2>Account Responsibility</h2>
-    <ul>
-      <li>You are responsible for maintaining the confidentiality of your account credentials</li>
-      <li>You are responsible for all activity that occurs under your account</li>
-      <li>You must provide accurate information when creating your account</li>
-      <li>Notify us immediately of any unauthorised use of your account</li>
-    </ul>
+      <h2>Eligibility</h2>
+      <p>
+        You must be at least 18 years old to use Maika. By using the app you confirm that you
+        meet this requirement.
+      </p>
 
-    <h2>Maika+ Subscription</h2>
-    <p>
-      Maika offers a premium subscription ("Maika+") that unlocks the AI chat feature and
-      additional content. Subscription terms:
-    </p>
-    <ul>
-      <li>Maika+ is billed monthly or annually through the Apple App Store or Google Play</li>
-      <li>Payment is charged to your App Store / Google Play account at purchase confirmation</li>
-      <li>Subscriptions automatically renew unless cancelled at least 24 hours before the renewal date</li>
-      <li>You can manage or cancel your subscription in your device's App Store / Play Store account settings</li>
-      <li>No refunds are provided for partial subscription periods, except where required by law</li>
-      <li>New users receive a free trial period as described in the app at time of registration</li>
-    </ul>
+      <h2>Account Responsibility</h2>
+      <ul>
+        <li>You are responsible for maintaining the confidentiality of your account credentials</li>
+        <li>You are responsible for all activity that occurs under your account</li>
+        <li>You must provide accurate information when creating your account</li>
+        <li>Notify us immediately of any unauthorised use of your account</li>
+      </ul>
 
-    <h2>Acceptable Use</h2>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Use the app for any unlawful purpose</li>
-      <li>Attempt to gain unauthorised access to any part of the service</li>
-      <li>Reverse engineer, decompile, or disassemble the app</li>
-      <li>Use the app to harass, abuse, or harm others</li>
-      <li>Submit false or misleading information</li>
-    </ul>
+      <h2>Maika+ Subscription</h2>
+      <p>
+        Maika offers a premium subscription ("Maika+") that unlocks the AI chat feature and
+        additional content.
+      </p>
+      <ul>
+        <li>Maika+ is billed monthly or annually through the Apple App Store or Google Play</li>
+        <li>Payment is charged to your App Store / Google Play account at purchase confirmation</li>
+        <li>Subscriptions automatically renew unless cancelled at least 24 hours before the renewal date</li>
+        <li>You can manage or cancel your subscription in your device's App Store / Play Store account settings</li>
+        <li>No refunds are provided for partial subscription periods, except where required by law</li>
+        <li>New users receive a free trial period as described in the app at time of registration</li>
+      </ul>
 
-    <h2>Medical Disclaimer</h2>
-    <p>
-      <strong>Maika is not a medical device.</strong> The app and its AI assistant provide general
-      wellness information only. Nothing in the app constitutes medical advice, diagnosis, or
-      treatment. Always consult a qualified healthcare professional for medical concerns.
-    </p>
-    <p>
-      Maika is not intended or approved for use as a contraceptive method. Cycle predictions
-      are estimates and should not be relied upon for family planning decisions.
-    </p>
+      <h2>Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the app for any unlawful purpose</li>
+        <li>Attempt to gain unauthorised access to any part of the service</li>
+        <li>Reverse engineer, decompile, or disassemble the app</li>
+        <li>Submit false or misleading information</li>
+      </ul>
 
-    <h2>Intellectual Property</h2>
-    <p>
-      All content, features, and functionality of Maika — including but not limited to text,
-      graphics, logos, and software — are owned by or licensed to us and are protected by
-      intellectual property laws.
-    </p>
+      <h2>Medical Disclaimer</h2>
+      <p>
+        <strong>Maika is not a medical device.</strong> The app and its AI assistant provide
+        general wellness information only. Nothing in the app constitutes medical advice,
+        diagnosis, or treatment. Always consult a qualified healthcare professional for medical
+        concerns.
+      </p>
+      <p>
+        Maika is not intended or approved for use as a contraceptive method. Cycle predictions
+        are estimates and should not be relied upon for family planning decisions.
+      </p>
 
-    <h2>Disclaimer of Warranties</h2>
-    <p>
-      Maika is provided "as is" without warranties of any kind, express or implied. We do not
-      warrant that the service will be uninterrupted, error-free, or that cycle predictions
-      will be accurate for your individual circumstances.
-    </p>
+      <h2>Intellectual Property</h2>
+      <p>
+        All content, features, and functionality of Maika — including but not limited to text,
+        graphics, logos, and software — are owned by or licensed to us and are protected by
+        intellectual property laws.
+      </p>
 
-    <h2>Limitation of Liability</h2>
-    <p>
-      To the maximum extent permitted by applicable law, we shall not be liable for any indirect,
-      incidental, special, or consequential damages arising from your use of the app. Our total
-      liability shall not exceed the amount you paid for the service in the past 12 months.
-    </p>
+      <h2>Disclaimer of Warranties</h2>
+      <p>
+        Maika is provided "as is" without warranties of any kind, express or implied. We do not
+        warrant that the service will be uninterrupted, error-free, or that cycle predictions
+        will be accurate for your individual circumstances.
+      </p>
 
-    <h2>Termination</h2>
-    <p>
-      You may delete your account at any time via Profile → Delete Account. We reserve the right
-      to suspend or terminate accounts that violate these Terms. Upon termination, your data will
-      be deleted in accordance with our Privacy Policy.
-    </p>
+      <h2>Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by applicable law, we shall not be liable for any
+        indirect, incidental, special, or consequential damages arising from your use of the app.
+        Our total liability shall not exceed the amount you paid for the service in the past
+        12 months.
+      </p>
 
-    <h2>Changes to Terms</h2>
-    <p>
-      We may update these Terms from time to time. Continued use of the app after changes
-      constitutes acceptance of the updated Terms. We will update the "Last Updated" date when
-      changes are made.
-    </p>
+      <h2>Termination</h2>
+      <p>
+        You may delete your account at any time via Profile → Delete Account. We reserve the
+        right to suspend or terminate accounts that violate these Terms. Upon termination, your
+        data will be deleted in accordance with our Privacy Policy.
+      </p>
 
-    <h2>Governing Law</h2>
-    <p>
-      These Terms are governed by and construed in accordance with the laws of the State of Israel,
-      without regard to its conflict of law provisions.
-    </p>
+      <h2>Changes to Terms</h2>
+      <p>
+        We may update these Terms from time to time. Continued use of the app after changes
+        constitutes acceptance of the updated Terms. We will update the "Last Updated" date when
+        changes are made.
+      </p>
 
-    <h2>Contact Us</h2>
-    <p>
-      Questions about these Terms:
-      <a href="mailto:support@maika-app.com">support@maika-app.com</a>
-    </p>
+      <h2>Governing Law</h2>
+      <p>
+        These Terms are governed by and construed in accordance with the laws of the State of
+        Israel, without regard to its conflict of law provisions.
+      </p>
+
+      <h2>Contact Us</h2>
+      <p>
+        Questions about these Terms:
+        <a href="mailto:support@maika-app.com">support@maika-app.com</a>
+      </p>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Maika. All rights reserved.</p>
+      <p style="margin-top:8px">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/support">Support</a>
+      </p>
+    </footer>
   </body>
 </html>

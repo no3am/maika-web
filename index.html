@@ -8,33 +8,55 @@
       * { box-sizing: border-box; margin: 0; padding: 0; }
       body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        color: #333;
-        background: #fff;
+        color: #3a2e2e;
+        background: #fdfaf8;
       }
+
+      /* ── Nav ── */
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 18px 32px;
+        border-bottom: 1px solid #ede5e1;
+        background: #fdfaf8;
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+      .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
+      .nav-brand span { font-size: 20px; font-weight: 700; color: #3a2e2e; letter-spacing: -0.3px; }
+
+      /* ── Hero ── */
       .hero {
-        background: linear-gradient(135deg, #fdf0f3 0%, #fde8ed 100%);
-        padding: 80px 20px 60px;
+        background: linear-gradient(160deg, #fdf0f3 0%, #fdf7ee 40%, #f0f6f1 100%);
+        padding: 72px 20px 64px;
         text-align: center;
       }
+      .hero-icon { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 24px; box-shadow: 0 4px 24px rgba(196,122,136,0.18); }
       .hero h1 {
         font-size: 48px;
-        color: #c47a88;
-        font-weight: 700;
+        color: #3a2e2e;
+        font-weight: 800;
         letter-spacing: -1px;
+        line-height: 1.1;
       }
+      .hero h1 span { color: #c47a88; }
       .hero p {
-        font-size: 20px;
-        color: #666;
+        font-size: 19px;
+        color: #6b5a58;
         margin-top: 16px;
-        max-width: 520px;
+        max-width: 500px;
         margin-left: auto;
         margin-right: auto;
-        line-height: 1.5;
+        line-height: 1.55;
       }
       .badges {
         margin-top: 36px;
         display: flex;
-        gap: 16px;
+        gap: 14px;
         justify-content: center;
         flex-wrap: wrap;
       }
@@ -42,86 +64,136 @@
         display: inline-block;
         background: #c47a88;
         color: #fff;
-        padding: 12px 24px;
+        padding: 13px 28px;
         border-radius: 50px;
         text-decoration: none;
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 600;
+        letter-spacing: 0.1px;
       }
       .badge.secondary {
         background: transparent;
         color: #c47a88;
         border: 2px solid #c47a88;
       }
-      .features {
-        max-width: 900px;
+
+      /* ── Season strip ── */
+      .season-strip {
+        display: flex;
+        height: 5px;
+      }
+      .season-strip div { flex: 1; }
+      .s1 { background: #8da882; }
+      .s2 { background: #c9a480; }
+      .s3 { background: #c47a88; }
+      .s4 { background: #8fa8c0; }
+
+      /* ── Features ── */
+      .features-wrap {
+        max-width: 920px;
         margin: 64px auto;
         padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 32px;
       }
-      .feature h3 { font-size: 18px; color: #c47a88; margin-bottom: 8px; }
-      .feature p { font-size: 15px; color: #555; line-height: 1.6; }
-      .footer {
-        border-top: 1px solid #eee;
+      .features-wrap h2 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: #3a2e2e;
+        margin-bottom: 40px;
+        letter-spacing: -0.3px;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 28px;
+      }
+      .feature {
+        background: #fff;
+        border: 1px solid #ede5e1;
+        border-radius: 14px;
+        padding: 24px;
+      }
+      .feature-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+      }
+      .feature h3 { font-size: 16px; font-weight: 700; color: #3a2e2e; margin-bottom: 8px; }
+      .feature p { font-size: 14px; color: #6b5a58; line-height: 1.6; }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid #ede5e1;
         padding: 32px 20px;
         text-align: center;
-        color: #888;
-        font-size: 14px;
+        color: #9b8885;
+        font-size: 13px;
+        background: #fdfaf8;
       }
-      .footer a { color: #c47a88; text-decoration: none; margin: 0 12px; }
-      .footer a:hover { text-decoration: underline; }
+      footer a { color: #c47a88; text-decoration: none; margin: 0 10px; }
+      footer a:hover { text-decoration: underline; }
+      footer .links { margin-top: 10px; }
     </style>
   </head>
   <body>
+    <nav>
+      <a href="/" class="nav-brand">
+        <img src="/maika-icon.png" alt="Maika icon" />
+        <span>Maika</span>
+      </a>
+    </nav>
+
     <div class="hero">
-      <h1>Maika</h1>
-      <p>Women's health and cycle tracking — personalised to you, powered by AI.</p>
+      <img src="/maika-icon.png" alt="Maika" class="hero-icon" />
+      <h1>Women's health,<br /><span>in harmony with your cycle.</span></h1>
+      <p>Track your cycle, understand your patterns, and get personalised guidance — powered by AI.</p>
       <div class="badges">
         <a href="#" class="badge">Download on App Store</a>
         <a href="#" class="badge secondary">Get it on Google Play</a>
       </div>
     </div>
 
-    <div class="features">
-      <div class="feature">
-        <h3>Cycle Tracking</h3>
-        <p>
-          Log your period, flow intensity, mood, energy, and symptoms. Get accurate cycle
-          predictions that improve over time.
-        </p>
-      </div>
-      <div class="feature">
-        <h3>Personalised Insights</h3>
-        <p>
-          Understand your patterns — mood by phase, energy trends, top symptoms — with beautiful
-          charts tailored to your cycle.
-        </p>
-      </div>
-      <div class="feature">
-        <h3>AI Chat Assistant</h3>
-        <p>
-          Ask Maika anything about your health, cycle, or wellbeing. Powered by Claude AI,
-          grounded in Maika's expert content library.
-        </p>
-      </div>
-      <div class="feature">
-        <h3>Daily Content</h3>
-        <p>
-          Receive tips, articles, and audio briefs matched to your current cycle phase, health
-          goal, and personal profile.
-        </p>
+    <div class="season-strip">
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+      <div class="s4"></div>
+    </div>
+
+    <div class="features-wrap">
+      <h2>Everything your cycle deserves</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-dot" style="background:#8da882"></div>
+          <h3>Cycle Tracking</h3>
+          <p>Log your period, flow, mood, energy, and symptoms. Predictions that improve with every cycle.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-dot" style="background:#c9a480"></div>
+          <h3>Personalised Insights</h3>
+          <p>Understand your patterns — mood by phase, energy trends, top symptoms — with beautiful charts.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-dot" style="background:#c47a88"></div>
+          <h3>AI Chat Assistant</h3>
+          <p>Ask Maika anything about your health and cycle. Accurate answers grounded in expert content.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-dot" style="background:#8fa8c0"></div>
+          <h3>Seasonal Content</h3>
+          <p>Daily tips, articles, and audio briefs matched to your cycle phase, goal, and personal profile.</p>
+        </div>
       </div>
     </div>
 
-    <div class="footer">
+    <footer>
       <p>&copy; 2026 Maika. All rights reserved.</p>
-      <p style="margin-top: 12px;">
+      <p class="links">
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
         <a href="/support">Support</a>
       </p>
-    </div>
+    </footer>
   </body>
 </html>
