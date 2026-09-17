@@ -53,6 +53,29 @@
       ul { padding-left: 20px; margin-bottom: 12px; }
       li { font-size: 15px; margin-bottom: 6px; }
       a { color: #c47a88; }
+      h3 { font-size: 15px; font-weight: 700; color: #3a2e2e; margin-top: 20px; margin-bottom: 8px; }
+      [hidden] { display: none !important; }
+      nav { justify-content: space-between; }
+      .lang-toggle {
+        font: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        color: #c47a88;
+        background: none;
+        border: 1px solid #ede5e1;
+        border-radius: 999px;
+        padding: 6px 16px;
+        cursor: pointer;
+      }
+      .lang-toggle:hover { background: #fff; }
+      /* Arabic block. Mirrored rather than merely right-aligned: a bulleted
+         list with its markers still on the left reads as broken. */
+      .lang[dir='rtl'] { text-align: right; }
+      .lang[dir='rtl'] ul { padding-right: 20px; padding-left: 0; }
+      .lang[dir='rtl'] h2 { text-align: right; }
+      /* Without JS BOTH languages render, stacked. She always gets something she
+         can read; this only separates them. */
+      .lang + .lang { border-top: 2px solid #ede5e1; margin-top: 56px; padding-top: 40px; }
       footer {
         border-top: 1px solid #ede5e1;
         padding: 24px 20px;
@@ -70,11 +93,13 @@
         <img src="/maika-icon.png" alt="Maika" />
         <span>Maika</span>
       </a>
+      <button id="langToggle" class="lang-toggle" type="button" hidden>العربية</button>
     </nav>
     <div class="season-strip">
       <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div>
     </div>
 
+    <div class="lang" data-lang="en">
     <main>
       <h1>Privacy Policy</h1>
       <p class="meta">Last updated: March 28, 2026</p>
@@ -236,6 +261,172 @@
         Website: <a href="https://maika-app.com">maika-app.com</a>
       </p>
     </main>
+    </div>
+
+    <div class="lang" data-lang="ar" dir="rtl">
+    <main>
+      <h1>سياسة الخصوصية</h1>
+      <p class="meta">آخر تحديث: 28 مارس 2026</p>
+
+      <h2>مقدمة</h2>
+      <p>
+        نلتزم في Maika ("نحن" أو "الخاصة بنا") بحماية خصوصيتكِ. توضّح سياسة الخصوصية
+        هذه كيف نجمع معلوماتكِ ونستخدمها ونخزّنها ونحميها عند استخدامكِ تطبيق Maika
+        لصحة المرأة وتتبّع الدورة الشهرية.
+      </p>
+      <p>
+        بياناتكِ الصحية حسّاسة — نجمع فقط ما هو ضروري لتقديم الخدمة، ولا نبيعها
+        أبدًا، ويمكنكِ حذفها في أي وقت.
+      </p>
+
+      <h2>المعلومات التي نجمعها</h2>
+      <h3>معلومات الحساب</h3>
+      <ul>
+        <li><strong>البريد الإلكتروني</strong> — يُستخدم لإنشاء حسابكِ والتحقق من هويتكِ</li>
+        <li><strong>معرّف المستخدم</strong> — رقم تعريفي عشوائي يُنشأ عند التسجيل (وليس بريدكِ الإلكتروني)</li>
+      </ul>
+
+      <h3>بيانات الملف الشخصي والبيانات الصحية التي تقدّمينها</h3>
+      <ul>
+        <li><strong>تاريخ الميلاد والطول والوزن</strong></li>
+        <li><strong>بيانات الدورة:</strong> تواريخ بداية الدورة ونهايتها، وطول الدورة، وغزارة النزيف (تنقيط، خفيف، متوسط، غزير، غزير جدًا)</li>
+        <li><strong>السجلات اليومية:</strong> المزاج، ومستوى الطاقة، والرغبة الجنسية، وحالة البشرة، والأعراض، والملاحظات الشخصية</li>
+        <li><strong>الأهداف الصحية:</strong> الهدف الذي اخترتِه (مثل تنظيم الدورة، أو الحمل، أو العافية)</li>
+        <li><strong>التذكيرات:</strong> العناوين والأوقات التي تحدّدينها للتذكيرات الصحية</li>
+      </ul>
+
+      <h3>رسائل المحادثة مع الذكاء الاصطناعي</h3>
+      <p>
+        عند استخدامكِ ميزة المحادثة في Maika، تُعالَج رسائلكِ بواسطة Claude من
+        Anthropic. وقد يُضاف سياق مجهول الهوية (مرحلة دورتكِ الحالية، وفئة هدفكِ
+        الصحي العامة) لتحسين جودة الردود. ولا نرسل اسمكِ أو بريدكِ الإلكتروني أو أي
+        معلومات تعرّف بكِ شخصيًا إلى خدمة الذكاء الاصطناعي.
+      </p>
+
+      <h2>كيف نخزّن بياناتكِ</h2>
+      <p>
+        تُخزَّن جميع بيانات الحساب والبيانات الصحية على خوادم تشغّلها Amazon Web
+        Services (AWS) في منطقة <strong>الاتحاد الأوروبي (فرانكفورت،
+        eu-central-1)</strong>. وتُشفَّر البيانات أثناء التخزين وأثناء النقل
+        باستخدام معايير AES-256 وTLS 1.2 فما فوق.
+      </p>
+      <p>
+        تُخزَّن تمثيلات سياق المحادثة في Supabase (المستضافة داخل الاتحاد الأوروبي).
+        وهي تمثيلات رقمية مجهولة الهوية تُستخدم فقط لتحسين ملاءمة ردود الذكاء
+        الاصطناعي، ولا تحتوي على معلوماتكِ الشخصية.
+      </p>
+
+      <h2>كيف نستخدم معلوماتكِ</h2>
+      <ul>
+        <li>للتحقق من هويتكِ والحفاظ على حسابكِ</li>
+        <li>لتتبّع تاريخ دورتكِ وأنماطكِ الصحية وعرضها</li>
+        <li>لتخصيص المحتوى (النصائح والمقالات والرؤى) بحسب مرحلة دورتكِ وهدفكِ الصحي</li>
+        <li>لتشغيل مساعد المحادثة الذكي بسياق متعلق بدورتكِ</li>
+        <li>لإرسال إشعارات التذكيرات التي أنشأتِها (فقط إذا منحتِ الإذن بذلك)</li>
+        <li>لإنشاء تقارير الرؤى الخاصة بكِ (المزاج حسب المرحلة، وأنماط الطاقة، واتجاهات الأعراض)</li>
+      </ul>
+
+      <h2>مشاركة البيانات</h2>
+      <p>نحن لا نبيع معلوماتكِ الشخصية ولا نتاجر بها ولا نؤجّرها. وتُشارَك بياناتكِ فقط مع:</p>
+      <ul>
+        <li>
+          <strong>Amazon Web Services (AWS):</strong> مزوّد البنية التحتية. يخزّن
+          بيانات حسابكِ وبياناتكِ الصحية داخل الاتحاد الأوروبي.
+          <a href="https://aws.amazon.com/privacy/" target="_blank">aws.amazon.com/privacy</a>
+        </li>
+        <li>
+          <strong>Anthropic (Claude AI):</strong> تعالج رسائل محادثتكِ مع سياق دورة
+          مجهول الهوية.
+          <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>
+        </li>
+        <li>
+          <strong>Supabase:</strong> تستضيف تمثيلات السياق مجهولة الهوية داخل الاتحاد الأوروبي.
+          <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
+        </li>
+        <li>
+          <strong>RevenueCat:</strong> تعالج عمليات شراء الاشتراكات داخل التطبيق. ولا
+          نشارك معها سوى معرّف المستخدم المجهول — ولا نشارك بياناتكِ الصحية أبدًا.
+          <a href="https://www.revenuecat.com/privacy" target="_blank">revenuecat.com/privacy</a>
+        </li>
+        <li>
+          <strong>Apple App Store / Google Play:</strong> تتوليان معالجة مدفوعات
+          الاشتراكات، وفقًا لسياسات الخصوصية الخاصة بكل منهما.
+        </li>
+      </ul>
+
+      <h2>أذونات الجهاز</h2>
+      <ul>
+        <li>
+          <strong>الإشعارات:</strong> تُستخدم لإرسال التذكيرات الصحية التي أنشأتِها.
+          ويمكنكِ تعطيل الإشعارات في أي وقت من إعدادات جهازكِ أو من داخل التطبيق.
+        </li>
+      </ul>
+      <p>لا يطلب Maika الوصول إلى الكاميرا أو الصور أو جهات الاتصال أو الموقع أو التقويم.</p>
+
+      <h2>أمن البيانات</h2>
+      <ul>
+        <li>تُشفَّر جميع البيانات أثناء النقل عبر HTTPS/TLS</li>
+        <li>تُشفَّر جميع البيانات أثناء التخزين (AES-256) في AWS</li>
+        <li>تُدار عملية التحقق من الهوية عبر AWS Cognito مع إدارة آمنة للرموز</li>
+        <li>تخضع نقاط الوصول البرمجية لحدود معدّل الاستخدام لمنع إساءة الاستخدام</li>
+        <li>لا تُدرَج البيانات الصحية في سجلات الخادم أبدًا</li>
+      </ul>
+
+      <h2>حقوقكِ والتحكم ببياناتكِ (GDPR)</h2>
+      <p>إذا كنتِ مقيمة في المنطقة الاقتصادية الأوروبية، فلكِ حقوق بموجب اللائحة العامة لحماية البيانات:</p>
+      <ul>
+        <li><strong>الاطّلاع:</strong> يمكنكِ عرض جميع بياناتكِ الصحية داخل التطبيق في أي وقت</li>
+        <li><strong>التصحيح:</strong> يمكنكِ تعديل ملفكِ الشخصي وسجلاتكِ الصحية في أي وقت داخل التطبيق</li>
+        <li>
+          <strong>الحذف:</strong> يمكنكِ حذف حسابكِ وجميع بياناتكِ نهائيًا من خلال:
+          الملف الشخصي ← حذف الحساب. والحذف فوري ولا يمكن التراجع عنه
+        </li>
+        <li><strong>نقل البيانات:</strong> تواصلي معنا لطلب نسخة من بياناتكِ بصيغة قابلة للقراءة آليًا</li>
+        <li><strong>الاعتراض:</strong> تواصلي معنا إذا كنتِ تعترضين على أي معالجة لبياناتكِ</li>
+      </ul>
+      <p>
+        لممارسة أي من هذه الحقوق:
+        <a href="mailto:support@maika-app.com">support@maika-app.com</a>
+      </p>
+
+      <h2>الاحتفاظ بالبيانات</h2>
+      <p>
+        نحتفظ ببياناتكِ ما دام حسابكِ نشطًا. وعند حذفكِ الحساب، تُحذف جميع البيانات
+        الشخصية والسجلات الصحية نهائيًا خلال 30 يومًا. وقد نحتفظ لفترة أطول
+        بإحصاءات مجمّعة ومجهولة الهوية لا ترتبط بكِ.
+      </p>
+
+      <h2>خصوصية الأطفال</h2>
+      <p>
+        Maika مخصّص للأشخاص الذين تبلغ أعمارهم 18 عامًا فأكثر. ولا نجمع عن علم
+        معلومات من أي شخص دون سن 18.
+      </p>
+
+      <h2>إخلاء المسؤولية الطبية</h2>
+      <p>
+        Maika ليس جهازًا طبيًا ويجب ألا يُستخدم بديلًا عن الاستشارة الطبية المتخصصة
+        أو التشخيص أو العلاج. ويقدّم مساعد المحادثة الذكي وجميع محتويات التطبيق
+        معلومات عامة تتعلق بالعافية فقط. يُرجى دائمًا استشارة مقدّم رعاية صحية مؤهل
+        بشأن أي مسألة طبية.
+      </p>
+      <p>
+        Maika غير مُخصَّص للاستخدام كوسيلة لمنع الحمل. وبيانات تتبّع الدورة هي
+        لأغراض إعلامية فقط.
+      </p>
+
+      <h2>التعديلات على هذه السياسة</h2>
+      <p>
+        قد نقوم بتحديث سياسة الخصوصية هذه من حين لآخر. وسنُعلمكِ بالتغييرات الجوهرية
+        عبر تحديث تاريخ "آخر تحديث" في أعلى هذه الصفحة.
+      </p>
+
+      <h2>تواصلي معنا</h2>
+      <p>
+        البريد الإلكتروني: <a href="mailto:support@maika-app.com">support@maika-app.com</a><br />
+        الموقع: <a href="https://maika-app.com">maika-app.com</a>
+      </p>
+    </main>
+    </div>
 
     <footer>
       <p>&copy; 2026 Maika. All rights reserved.</p>
@@ -245,5 +436,49 @@
         <a href="/support">Support</a>
       </p>
     </footer>
+    <script>
+      // Picks the language from her phone, remembers what she chooses, and
+      // degrades to showing BOTH if it never runs.
+      //
+      // ⚠️ Deliberately NOT driven by the app. Profile and the paywall open this
+      // page with Linking.openURL — her ordinary browser, carrying her device
+      // language — so the page can decide for itself. Having the app send the
+      // language would mean a release, a second set of URLs, and a link that can
+      // go stale on every phone already installed. A dead Terms link is worse
+      // than an English one.
+      (function () {
+        var btn = document.getElementById('langToggle');
+        var blocks = document.querySelectorAll('.lang');
+        if (!btn || !blocks.length) return;
+
+        function show(lang) {
+          for (var i = 0; i < blocks.length; i++) {
+            blocks[i].hidden = blocks[i].getAttribute('data-lang') !== lang;
+          }
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+          btn.textContent = lang === 'ar' ? 'English' : 'العربية';
+          try { localStorage.setItem('maika-lang', lang); } catch (e) {}
+        }
+
+        var saved = null;
+        try { saved = localStorage.getItem('maika-lang'); } catch (e) {}
+
+        // `ar` or `ar-EG`, not merely "starts with ar" — `arn` is Mapudungun and
+        // would have matched. Caught by running the real script against a list
+        // of language tags rather than reading it.
+        var tags = navigator.languages || [navigator.language || 'en'];
+        var wantsArabic = false;
+        for (var j = 0; j < tags.length; j++) {
+          if (/^ar(-|$)/i.test(String(tags[j]))) { wantsArabic = true; break; }
+        }
+
+        btn.hidden = false;
+        show(saved === 'ar' || saved === 'en' ? saved : wantsArabic ? 'ar' : 'en');
+        btn.addEventListener('click', function () {
+          show(document.documentElement.lang === 'ar' ? 'en' : 'ar');
+        });
+      })();
+    </script>
   </body>
 </html>

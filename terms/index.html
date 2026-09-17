@@ -52,6 +52,29 @@
       ul { padding-left: 20px; margin-bottom: 12px; }
       li { font-size: 15px; margin-bottom: 6px; }
       a { color: #c47a88; }
+      h3 { font-size: 15px; font-weight: 700; color: #3a2e2e; margin-top: 20px; margin-bottom: 8px; }
+      [hidden] { display: none !important; }
+      nav { justify-content: space-between; }
+      .lang-toggle {
+        font: inherit;
+        font-size: 14px;
+        font-weight: 600;
+        color: #c47a88;
+        background: none;
+        border: 1px solid #ede5e1;
+        border-radius: 999px;
+        padding: 6px 16px;
+        cursor: pointer;
+      }
+      .lang-toggle:hover { background: #fff; }
+      /* Arabic block. Mirrored rather than merely right-aligned: a bulleted
+         list with its markers still on the left reads as broken. */
+      .lang[dir='rtl'] { text-align: right; }
+      .lang[dir='rtl'] ul { padding-right: 20px; padding-left: 0; }
+      .lang[dir='rtl'] h2 { text-align: right; }
+      /* Without JS BOTH languages render, stacked. She always gets something she
+         can read; this only separates them. */
+      .lang + .lang { border-top: 2px solid #ede5e1; margin-top: 56px; padding-top: 40px; }
       footer {
         border-top: 1px solid #ede5e1;
         padding: 24px 20px;
@@ -69,11 +92,13 @@
         <img src="/maika-icon.png" alt="Maika" />
         <span>Maika</span>
       </a>
+      <button id="langToggle" class="lang-toggle" type="button" hidden>العربية</button>
     </nav>
     <div class="season-strip">
       <div class="s1"></div><div class="s2"></div><div class="s3"></div><div class="s4"></div>
     </div>
 
+    <div class="lang" data-lang="en">
     <main>
       <h1>Terms of Service</h1>
       <p class="meta">Last updated: March 28, 2026</p>
@@ -187,6 +212,123 @@
         <a href="mailto:support@maika-app.com">support@maika-app.com</a>
       </p>
     </main>
+    </div>
+
+    <div class="lang" data-lang="ar" dir="rtl">
+    <main>
+      <h1>شروط الخدمة</h1>
+      <p class="meta">آخر تحديث: 28 مارس 2026</p>
+
+      <h2>قبول الشروط</h2>
+      <p>
+        بتنزيلكِ تطبيق Maika أو استخدامكِ له، فإنكِ توافقين على الالتزام بشروط الخدمة
+        هذه. وإذا كنتِ لا توافقين عليها، فيرجى عدم استخدام التطبيق.
+      </p>
+
+      <h2>وصف الخدمة</h2>
+      <p>
+        Maika تطبيق لصحة المرأة وتتبّع الدورة الشهرية، يوفّر تسجيل الدورة، ومحتوى
+        صحيًا مخصّصًا، ومحادثة مدعومة بالذكاء الاصطناعي، ورؤى صحية.
+      </p>
+
+      <h2>أهلية الاستخدام</h2>
+      <p>
+        يجب ألا يقلّ عمركِ عن 18 عامًا لاستخدام Maika. وباستخدامكِ التطبيق فإنكِ
+        تؤكدين استيفاءكِ لهذا الشرط.
+      </p>
+
+      <h2>مسؤولية الحساب</h2>
+      <ul>
+        <li>أنتِ مسؤولة عن الحفاظ على سرية بيانات الدخول إلى حسابكِ</li>
+        <li>أنتِ مسؤولة عن جميع الأنشطة التي تتم من خلال حسابكِ</li>
+        <li>يجب تقديم معلومات صحيحة عند إنشاء الحساب</li>
+        <li>يُرجى إبلاغنا فورًا بأي استخدام غير مصرّح به لحسابكِ</li>
+      </ul>
+
+      <h2>اشتراك Maika+</h2>
+      <p>
+        يوفّر Maika اشتراكًا مدفوعًا ("Maika+") يتيح ميزة المحادثة بالذكاء الاصطناعي
+        ومحتوى إضافيًا.
+      </p>
+      <ul>
+        <li>تُحتسب قيمة اشتراك Maika+ شهريًا أو سنويًا عبر متجر Apple App Store أو Google Play</li>
+        <li>تُخصم قيمة الاشتراك من حسابكِ في App Store / Google Play عند تأكيد الشراء</li>
+        <li>يُجدَّد الاشتراك تلقائيًا ما لم يتم إلغاؤه قبل 24 ساعة على الأقل من تاريخ التجديد</li>
+        <li>يمكنكِ إدارة اشتراككِ أو إلغاؤه من إعدادات حسابكِ في App Store / Play Store على جهازكِ</li>
+        <li>لا تُردّ أي مبالغ عن فترات اشتراك جزئية، إلا حيثما يقتضي القانون ذلك</li>
+        <li>يحصل المستخدمون الجدد على فترة تجريبية مجانية وفق ما هو موضّح في التطبيق وقت التسجيل</li>
+      </ul>
+
+      <h2>الاستخدام المقبول</h2>
+      <p>أنتِ توافقين على عدم:</p>
+      <ul>
+        <li>استخدام التطبيق لأي غرض غير قانوني</li>
+        <li>محاولة الوصول غير المصرّح به إلى أي جزء من الخدمة</li>
+        <li>إجراء هندسة عكسية للتطبيق أو فكّ ترجمته أو تفكيكه</li>
+        <li>تقديم معلومات كاذبة أو مضلِّلة</li>
+      </ul>
+
+      <h2>إخلاء المسؤولية الطبية</h2>
+      <p>
+        <strong>Maika ليس جهازًا طبيًا.</strong> يقدّم التطبيق ومساعده الذكي معلومات
+        عامة تتعلق بالعافية فقط. ولا يشكّل أي مما ورد في التطبيق استشارة طبية أو
+        تشخيصًا أو علاجًا. يُرجى دائمًا استشارة مختص رعاية صحية مؤهل بشأن أي مسألة
+        طبية.
+      </p>
+      <p>
+        Maika غير مُخصَّص ولا مُعتمَد للاستخدام كوسيلة لمنع الحمل. وتوقّعات الدورة
+        الشهرية هي تقديرات، ولا ينبغي الاعتماد عليها في قرارات تنظيم الأسرة.
+      </p>
+
+      <h2>الملكية الفكرية</h2>
+      <p>
+        جميع المحتويات والميزات والوظائف في Maika — بما في ذلك على سبيل المثال لا
+        الحصر النصوص والرسومات والشعارات والبرمجيات — مملوكة لنا أو مرخَّصة لنا،
+        ومحمية بموجب قوانين الملكية الفكرية.
+      </p>
+
+      <h2>إخلاء المسؤولية عن الضمانات</h2>
+      <p>
+        يُقدَّم Maika "كما هو" دون أي ضمانات من أي نوع، صريحة كانت أم ضمنية. ولا نضمن
+        أن تكون الخدمة متواصلة دون انقطاع أو خالية من الأخطاء، ولا أن تكون توقّعات
+        الدورة دقيقة بالنسبة لظروفكِ الفردية.
+      </p>
+
+      <h2>حدود المسؤولية</h2>
+      <p>
+        إلى أقصى حدّ يسمح به القانون المعمول به، لن نكون مسؤولين عن أي أضرار غير
+        مباشرة أو عرضية أو خاصة أو تبعية تنشأ عن استخدامكِ للتطبيق. ولن تتجاوز
+        مسؤوليتنا الإجمالية المبلغ الذي دفعتِه مقابل الخدمة خلال الاثني عشر شهرًا
+        الماضية.
+      </p>
+
+      <h2>إنهاء الحساب</h2>
+      <p>
+        يمكنكِ حذف حسابكِ في أي وقت من خلال: الملف الشخصي ← حذف الحساب. ونحتفظ بالحق
+        في تعليق أو إنهاء الحسابات التي تخالف هذه الشروط. وعند الإنهاء، تُحذف بياناتكِ
+        وفقًا لسياسة الخصوصية لدينا.
+      </p>
+
+      <h2>التعديلات على الشروط</h2>
+      <p>
+        قد نقوم بتحديث هذه الشروط من حين لآخر. ويُعدّ استمراركِ في استخدام التطبيق بعد
+        التعديلات قبولًا للشروط المحدَّثة. وسنحدّث تاريخ "آخر تحديث" عند إجراء أي
+        تغييرات.
+      </p>
+
+      <h2>القانون الحاكم</h2>
+      <p>
+        تخضع هذه الشروط لقوانين دولة إسرائيل وتُفسَّر وفقًا لها، دون اعتبار لقواعد
+        تنازع القوانين فيها.
+      </p>
+
+      <h2>تواصلي معنا</h2>
+      <p>
+        لأي استفسار بشأن هذه الشروط:
+        <a href="mailto:support@maika-app.com">support@maika-app.com</a>
+      </p>
+    </main>
+    </div>
 
     <footer>
       <p>&copy; 2026 Maika. All rights reserved.</p>
@@ -196,5 +338,49 @@
         <a href="/support">Support</a>
       </p>
     </footer>
+    <script>
+      // Picks the language from her phone, remembers what she chooses, and
+      // degrades to showing BOTH if it never runs.
+      //
+      // ⚠️ Deliberately NOT driven by the app. Profile and the paywall open this
+      // page with Linking.openURL — her ordinary browser, carrying her device
+      // language — so the page can decide for itself. Having the app send the
+      // language would mean a release, a second set of URLs, and a link that can
+      // go stale on every phone already installed. A dead Terms link is worse
+      // than an English one.
+      (function () {
+        var btn = document.getElementById('langToggle');
+        var blocks = document.querySelectorAll('.lang');
+        if (!btn || !blocks.length) return;
+
+        function show(lang) {
+          for (var i = 0; i < blocks.length; i++) {
+            blocks[i].hidden = blocks[i].getAttribute('data-lang') !== lang;
+          }
+          document.documentElement.lang = lang;
+          document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+          btn.textContent = lang === 'ar' ? 'English' : 'العربية';
+          try { localStorage.setItem('maika-lang', lang); } catch (e) {}
+        }
+
+        var saved = null;
+        try { saved = localStorage.getItem('maika-lang'); } catch (e) {}
+
+        // `ar` or `ar-EG`, not merely "starts with ar" — `arn` is Mapudungun and
+        // would have matched. Caught by running the real script against a list
+        // of language tags rather than reading it.
+        var tags = navigator.languages || [navigator.language || 'en'];
+        var wantsArabic = false;
+        for (var j = 0; j < tags.length; j++) {
+          if (/^ar(-|$)/i.test(String(tags[j]))) { wantsArabic = true; break; }
+        }
+
+        btn.hidden = false;
+        show(saved === 'ar' || saved === 'en' ? saved : wantsArabic ? 'ar' : 'en');
+        btn.addEventListener('click', function () {
+          show(document.documentElement.lang === 'ar' ? 'en' : 'ar');
+        });
+      })();
+    </script>
   </body>
 </html>
